@@ -81,7 +81,7 @@ def cuerpo(Total_paginas):
     for pages in range(1,Total_paginas+1) :
              
             print("pagina: "+str(pages))
-            URL="https://www.zonajobs.com.ar/buenos-aires/ofertas-de-trabajo-"+str(trabajo)+"-pagina-"+str(pages)+".html"
+            URL="https://www.zonajobs.com.ar/buenos-aires/ofertas-de-trabajo-"+str(trabajo)+"-publicacion-menor-a-7-dias-pagina-"+str(pages)+".html"
             print(URL)
             # Get login csrf token
             result = scraper.get(URL, allow_redirects=True)
@@ -257,7 +257,7 @@ def navega_cada_pagina_2(pagina):
 trabajo=sys.argv[1].replace(" ","-")
 
 
-LOGIN_URL="https://www.zonajobs.com.ar/buenos-aires/ofertas-de-trabajo-"+str(trabajo)+"-pagina-1.html"
+LOGIN_URL="https://www.zonajobs.com.ar/buenos-aires/ofertas-de-trabajo-"+str(trabajo)+"-publicacion-menor-a-7-dias-pagina-1.html"
 
 print(LOGIN_URL)
 
